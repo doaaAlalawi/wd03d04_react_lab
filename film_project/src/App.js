@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Component } from 'react'
 import "./App.css";
 import FilmListing from "./FilmListing";
 import FilmDetails from './FilmDetails';
 import TMDB from "./TMDB";
-function App() {
-  return (
-  
-    <div className="film-library">
+
+export default class App extends Component {
+  render() {
+    return (
+      <div className="film-library">
       <div className="film-list">
         <h1 className="section-title">FILMS</h1>
          <FilmListing list={TMDB.films} />
@@ -16,8 +17,7 @@ function App() {
         <FilmDetails films ={TMDB.films}/>
       </div>
     </div>
-
-  );
+    )
+  }
 }
 
-export default App;
