@@ -16,7 +16,7 @@ export default class FilmListing extends Component {
         <FilmRow film = {film} key = {film.id}
         onFaveToggle = {() => this.props.onFaveToggle(film)}
         isFave = {this.props.faves.includes(film)}
-        handleDetailsClick = {() => this.props.handleDetailsClick(film)}
+        handleDetailsClick = {this.props.handleDetailsClick}
         />
       )
     });
@@ -46,8 +46,8 @@ export default class FilmListing extends Component {
           </div>
         </div>
         {/* <h1> {props.films[0].title}</h1> */}
-        <div>{allFilms}</div>
-        {/* {this.state.filter === null ? allFilms : favefilm } */}
+        {/* <div>{allFilms}</div> */}
+        {this.state.filter === null ? allFilms : favefilm }
       </div>
     );
   }
