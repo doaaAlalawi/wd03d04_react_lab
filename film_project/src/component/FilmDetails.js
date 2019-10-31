@@ -20,7 +20,7 @@ function FilmDetails(props) {
   </div>
 </div>
 
-var notclicked =   <div className="film-details">
+var notclicked =   <div className="film-detail">
 <p>
   <i className="material-icons">subscriptions</i>
   <span>No film selected</span>
